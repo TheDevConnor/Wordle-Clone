@@ -1,5 +1,6 @@
-html, body {
-    background: var(--default-background);
+body {
+    background-color: #121213;
+    overflow: hidden;
 }
 
 :root {
@@ -21,9 +22,49 @@ html, body {
     font-family: Poppins, sans-serif;
     text-align: center;
     font-size: 2.4rem;
-    margin-top: 5rem;
+    padding-top: 50px;
+    margin-top: -10px;
     margin-bottom: 1px;
 }
+
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+#blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+#blur {
+    height: 500vh;
+    width: 500vh;
+    left: -100px;
+    position: absolute;
+    backdrop-filter: blur(50vmax);
+    z-index: -1;
+}
+
 
 .grid {
     display: grid;
